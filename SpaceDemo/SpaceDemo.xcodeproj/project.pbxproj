@@ -18,7 +18,7 @@
 		86894B9F17FD814200ADBECC /* BBUMyScene.m in Sources */ = {isa = PBXBuildFile; fileRef = 86894B9E17FD814200ADBECC /* BBUMyScene.m */; };
 		86894BA117FD814200ADBECC /* Spaceship.png in Resources */ = {isa = PBXBuildFile; fileRef = 86894BA017FD814200ADBECC /* Spaceship.png */; };
 		86894BA317FD814200ADBECC /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 86894BA217FD814200ADBECC /* Images.xcassets */; };
-		86894BC517FDA9E700ADBECC /* MyParticle.sks in Resources */ = {isa = PBXBuildFile; fileRef = 86894BC317FDA9E700ADBECC /* MyParticle.sks */; };
+		86894BC517FDA9E700ADBECC /* Explosion.sks in Resources */ = {isa = PBXBuildFile; fileRef = 86894BC317FDA9E700ADBECC /* Explosion.sks */; };
 		86894BC617FDA9E700ADBECC /* spark.png in Resources */ = {isa = PBXBuildFile; fileRef = 86894BC417FDA9E700ADBECC /* spark.png */; };
 /* End PBXBuildFile section */
 
@@ -40,7 +40,7 @@
 		86894B9E17FD814200ADBECC /* BBUMyScene.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = BBUMyScene.m; sourceTree = "<group>"; };
 		86894BA017FD814200ADBECC /* Spaceship.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = Spaceship.png; path = SpaceDemo/Spaceship.png; sourceTree = "<group>"; };
 		86894BA217FD814200ADBECC /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; name = Images.xcassets; path = SpaceDemo/Images.xcassets; sourceTree = "<group>"; };
-		86894BC317FDA9E700ADBECC /* MyParticle.sks */ = {isa = PBXFileReference; lastKnownFileType = file.sks; name = MyParticle.sks; path = SpaceDemo/MyParticle.sks; sourceTree = "<group>"; };
+		86894BC317FDA9E700ADBECC /* Explosion.sks */ = {isa = PBXFileReference; lastKnownFileType = file.sks; name = Explosion.sks; path = SpaceDemo/Explosion.sks; sourceTree = "<group>"; };
 		86894BC417FDA9E700ADBECC /* spark.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = spark.png; path = SpaceDemo/spark.png; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -119,7 +119,7 @@
 			children = (
 				86894BA217FD814200ADBECC /* Images.xcassets */,
 				86894B9717FD814200ADBECC /* Main.storyboard */,
-				86894BC317FDA9E700ADBECC /* MyParticle.sks */,
+				86894BC317FDA9E700ADBECC /* Explosion.sks */,
 				86894BA017FD814200ADBECC /* Spaceship.png */,
 				86894BC417FDA9E700ADBECC /* spark.png */,
 			);
@@ -183,7 +183,7 @@
 				86894BA317FD814200ADBECC /* Images.xcassets in Resources */,
 				86894BA117FD814200ADBECC /* Spaceship.png in Resources */,
 				86894B9917FD814200ADBECC /* Main.storyboard in Resources */,
-				86894BC517FDA9E700ADBECC /* MyParticle.sks in Resources */,
+				86894BC517FDA9E700ADBECC /* Explosion.sks in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
