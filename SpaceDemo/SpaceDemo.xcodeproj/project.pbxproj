@@ -20,6 +20,9 @@
 		86894BA317FD814200ADBECC /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 86894BA217FD814200ADBECC /* Images.xcassets */; };
 		86894BC517FDA9E700ADBECC /* Explosion.sks in Resources */ = {isa = PBXBuildFile; fileRef = 86894BC317FDA9E700ADBECC /* Explosion.sks */; };
 		86894BC617FDA9E700ADBECC /* spark.png in Resources */ = {isa = PBXBuildFile; fileRef = 86894BC417FDA9E700ADBECC /* spark.png */; };
+		86894BC817FDDA8600ADBECC /* Star.sks in Resources */ = {isa = PBXBuildFile; fileRef = 86894BC717FDDA8600ADBECC /* Star.sks */; };
+		86894BCA17FDDE0700ADBECC /* 102734__sarge4267__explosion4.wav in Resources */ = {isa = PBXBuildFile; fileRef = 86894BC917FDDE0700ADBECC /* 102734__sarge4267__explosion4.wav */; };
+		86894BCC17FE01D500ADBECC /* asteroid.png in Resources */ = {isa = PBXBuildFile; fileRef = 86894BCB17FE01D500ADBECC /* asteroid.png */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -42,6 +45,9 @@
 		86894BA217FD814200ADBECC /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; name = Images.xcassets; path = SpaceDemo/Images.xcassets; sourceTree = "<group>"; };
 		86894BC317FDA9E700ADBECC /* Explosion.sks */ = {isa = PBXFileReference; lastKnownFileType = file.sks; name = Explosion.sks; path = SpaceDemo/Explosion.sks; sourceTree = "<group>"; };
 		86894BC417FDA9E700ADBECC /* spark.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = spark.png; path = SpaceDemo/spark.png; sourceTree = "<group>"; };
+		86894BC717FDDA8600ADBECC /* Star.sks */ = {isa = PBXFileReference; lastKnownFileType = file.sks; name = Star.sks; path = SpaceDemo/Star.sks; sourceTree = "<group>"; };
+		86894BC917FDDE0700ADBECC /* 102734__sarge4267__explosion4.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; name = 102734__sarge4267__explosion4.wav; path = SpaceDemo/102734__sarge4267__explosion4.wav; sourceTree = "<group>"; };
+		86894BCB17FE01D500ADBECC /* asteroid.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = asteroid.png; path = SpaceDemo/asteroid.png; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -94,10 +100,10 @@
 			children = (
 				86894B9417FD814200ADBECC /* BBUAppDelegate.h */,
 				86894B9517FD814200ADBECC /* BBUAppDelegate.m */,
-				86894B9A17FD814200ADBECC /* BBUViewController.h */,
-				86894B9B17FD814200ADBECC /* BBUViewController.m */,
 				86894B9D17FD814200ADBECC /* BBUMyScene.h */,
 				86894B9E17FD814200ADBECC /* BBUMyScene.m */,
+				86894B9A17FD814200ADBECC /* BBUViewController.h */,
+				86894B9B17FD814200ADBECC /* BBUViewController.m */,
 			);
 			name = Code;
 			path = SpaceDemo;
@@ -117,11 +123,14 @@
 		86894BBF17FD817700ADBECC /* Resources */ = {
 			isa = PBXGroup;
 			children = (
+				86894BC917FDDE0700ADBECC /* 102734__sarge4267__explosion4.wav */,
+				86894BCB17FE01D500ADBECC /* asteroid.png */,
 				86894BA217FD814200ADBECC /* Images.xcassets */,
 				86894B9717FD814200ADBECC /* Main.storyboard */,
 				86894BC317FDA9E700ADBECC /* Explosion.sks */,
 				86894BA017FD814200ADBECC /* Spaceship.png */,
 				86894BC417FDA9E700ADBECC /* spark.png */,
+				86894BC717FDDA8600ADBECC /* Star.sks */,
 			);
 			name = Resources;
 			sourceTree = "<group>";
@@ -180,7 +189,10 @@
 			buildActionMask = 2147483647;
 			files = (
 				86894BC617FDA9E700ADBECC /* spark.png in Resources */,
+				86894BC817FDDA8600ADBECC /* Star.sks in Resources */,
+				86894BCC17FE01D500ADBECC /* asteroid.png in Resources */,
 				86894BA317FD814200ADBECC /* Images.xcassets in Resources */,
+				86894BCA17FDDE0700ADBECC /* 102734__sarge4267__explosion4.wav in Resources */,
 				86894BA117FD814200ADBECC /* Spaceship.png in Resources */,
 				86894B9917FD814200ADBECC /* Main.storyboard in Resources */,
 				86894BC517FDA9E700ADBECC /* Explosion.sks in Resources */,
