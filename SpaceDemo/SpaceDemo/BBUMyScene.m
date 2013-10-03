@@ -48,7 +48,7 @@ static CGPathRef createPathRotatedAroundBoundingBoxCenter(CGPathRef path, CGFloa
 
 -(id)initWithSize:(CGSize)size {    
     if (self = [super initWithSize:size]) {
-        self.lives = 1;
+        self.lives = 5;
         self.points = 0;
         
         self.backgroundColor = [SKColor colorWithRed:0.15 green:0.15 blue:0.3 alpha:1.0];
@@ -73,7 +73,7 @@ static CGPathRef createPathRotatedAroundBoundingBoxCenter(CGPathRef path, CGFloa
         self.player.physicsBody.usesPreciseCollisionDetection = YES;
         self.player.position = CGPointMake((self.size.width - self.player.size.width) / 2,
                                            (self.size.height - self.player.size.height) / 2);
-        //self.player.zRotation = DegreesToRadians(45.0);
+        self.player.zRotation = DegreesToRadians(45.0);
         [self addChild:self.player];
         
         self.asteroids = [@[] mutableCopy];
@@ -90,7 +90,7 @@ static CGPathRef createPathRotatedAroundBoundingBoxCenter(CGPathRef path, CGFloa
             SKEmitterNode* star = [NSKeyedUnarchiver unarchiveObjectWithFile:path];
             star.position = CGPointMake(arc4random_uniform(self.size.width), arc4random_uniform(self.size.height));
             star.zPosition = -1;
-            //[self addChild:star];
+            [self addChild:star];
         }
     }
     return self;
@@ -180,8 +180,6 @@ static CGPathRef createPathRotatedAroundBoundingBoxCenter(CGPathRef path, CGFloa
     }
     
     if ([self contactedPlayer:contact] && contactedAsteroid) {
-        return;
-        
         [contactedAsteroid runAction:[SKAction removeFromParent]];
         [self.asteroids removeObject:contactedAsteroid];
         [self.player runAction:[SKAction removeFromParent]];
@@ -220,6 +218,9 @@ static CGPathRef createPathRotatedAroundBoundingBoxCenter(CGPathRef path, CGFloa
     }
     
     if (contactedAsteroid && [self contactedLaser:contact] && self.children.count < 100) {
+        self.points += 500;
+        [self updateScoreBoard];
+        
         [contactedAsteroid removeAllActions];
         [contactedAsteroid runAction:[SKAction removeFromParent]];
         [self.asteroids removeObject:contactedAsteroid];
@@ -248,7 +249,7 @@ static CGPathRef createPathRotatedAroundBoundingBoxCenter(CGPathRef path, CGFloa
     crop.position = originalNode.position;
     
     crop.physicsBody = asteroid.physicsBody;
-    crop.physicsBody.collisionBitMask = 0;
+    crop.physicsBody.categoryBitMask = 0;
     asteroid.physicsBody = nil;
     
     [crop addChild:asteroid];
@@ -286,9 +287,10 @@ static CGPathRef createPathRotatedAroundBoundingBoxCenter(CGPathRef path, CGFloa
     self.player.zRotation = DegreesToRadians(angleInDegrees);
 }
 
--(void)touchesBegan:(NSSet *)touches withEvent:(UIEvent *)event {
-    CGPoint touchPoint = [[touches anyObject] locationInView:self.view];
-    [self rotatePlayerWithEndPoint:touchPoint];
+-(void)rotatePlayerAndMoveForwardWithTouchPoint:(CGPoint)point {
+    [self.player removeActionForKey:kMovementAction];
+    
+    [self rotatePlayerWithEndPoint:point];
     
     CGMutablePathRef path = CGPathCreateMutable();
     CGPathMoveToPoint(path, &CGAffineTransformIdentity,
@@ -296,9 +298,14 @@ static CGPathRef createPathRotatedAroundBoundingBoxCenter(CGPathRef path, CGFloa
                       self.player.position.y);
     CGPathAddLineToPoint(path, &CGAffineTransformIdentity, self.size.width / 2, 0.0);
     
-    /*SKAction* move = [SKAction followPath:createPathRotatedAroundBoundingBoxCenter(path, self.player.zRotation)
-                                 duration:1.0].reversedAction;
-    [self.player runAction:[SKAction repeatActionForever:move] withKey:kMovementAction];*/
+    SKAction* move = [SKAction followPath:createPathRotatedAroundBoundingBoxCenter(path, self.player.zRotation)
+                                 duration:5.0].reversedAction;
+    [self.player runAction:[SKAction repeatActionForever:move] withKey:kMovementAction];
+
+}
+
+-(void)touchesBegan:(NSSet *)touches withEvent:(UIEvent *)event {
+    [self rotatePlayerAndMoveForwardWithTouchPoint:[[touches anyObject] locationInView:self.view]];
     
     SKEmitterNode* laser = [SKEmitterNode node];
     laser.particleBirthRate = 3.0;
@@ -322,8 +329,7 @@ static CGPathRef createPathRotatedAroundBoundingBoxCenter(CGPathRef path, CGFloa
 }
 
 -(void)touchesMoved:(NSSet *)touches withEvent:(UIEvent *)event {
-    CGPoint touchPoint = [[touches anyObject] locationInView:self.view];
-    [self rotatePlayerWithEndPoint:touchPoint];
+    [self rotatePlayerAndMoveForwardWithTouchPoint:[[touches anyObject] locationInView:self.view]];
 }
 
 @end
