@@ -54,6 +54,26 @@
     }
 }
 
+-(BOOL)physics {
+    return self.physicsBody != nil;
+}
+
+-(void)setPhysics:(BOOL)physics {
+    if (physics) {
+        self.physicsBody = [SKPhysicsBody bodyWithEdgeLoopFromRect:CGRectMake(0.0, 0.0, 1.0, 1.0)];
+        
+        for (SKNode* node in self.children) {
+            node.physicsBody = [SKPhysicsBody bodyWithRectangleOfSize:node.calculateAccumulatedFrame.size];
+        }
+    } else {
+        self.physicsBody = nil;
+        
+        for (SKNode* node in self.children) {
+            node.physicsBody = nil;
+        }
+    }
+}
+
 -(void)update:(CFTimeInterval)currentTime {
     /* Called before each frame is rendered */
 }

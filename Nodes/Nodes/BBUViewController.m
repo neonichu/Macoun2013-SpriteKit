@@ -46,10 +46,28 @@
     [skView presentScene:self.scene];
     
     self.button = [UIButton buttonWithType:UIButtonTypeRoundedRect];
-    self.button.frame = CGRectMake(0.0, 50.0, 150.0, 20.0);
+    self.button.frame = CGRectMake(0.0, 50.0, 120.0, 20.0);
     [self.button addTarget:self action:@selector(tapped:) forControlEvents:UIControlEventTouchUpInside];
     [self.button setTitle:self.buttonTitles[0] forState:UIControlStateNormal];
     [self.view addSubview:self.button];
+    
+    UIButton* physics = [UIButton buttonWithType:UIButtonTypeRoundedRect];
+    physics.frame = CGRectMake(150.0, 50.0, 120.0, 20.0);
+    [physics addTarget:self action:@selector(physicsTapped:) forControlEvents:UIControlEventTouchUpInside];
+    [physics setTitle:@"Turn on gravity" forState:UIControlStateNormal];
+    [self.view addSubview:physics];
+}
+
+-(void)physicsTapped:(UIButton*)button {
+    if (self.scene.physics) {
+        self.scene.physics = NO;
+        
+        [button setTitle:@"Turn on gravity" forState:UIControlStateNormal];
+    } else {
+        self.scene.physics = YES;
+        
+        [button setTitle:@"Turn off gravity" forState:UIControlStateNormal];
+    }
 }
 
 -(void)tapped:(UIButton*)button {

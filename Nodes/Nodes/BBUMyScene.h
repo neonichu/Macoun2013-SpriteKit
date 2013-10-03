@@ -10,6 +10,7 @@
 
 @interface BBUMyScene : SKScene
 
+@property BOOL physics;
 @property NSUInteger type;
 
 @end
