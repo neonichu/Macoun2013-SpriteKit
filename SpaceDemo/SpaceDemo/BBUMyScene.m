@@ -102,7 +102,7 @@ static CGPathRef createPathRotatedAroundBoundingBoxCenter(CGPathRef path, CGFloa
     return self;
 }
 
--(SKNode*)createAsteroid {
+-(SKSpriteNode*)createAsteroid {
     SKSpriteNode* asteroid = [SKSpriteNode spriteNodeWithImageNamed:@"asteroid"];
     asteroid.size = CGSizeMake(50.0, 42.0);
     asteroid.physicsBody = [SKPhysicsBody bodyWithCircleOfRadius:25.0];
@@ -232,55 +232,20 @@ static CGPathRef createPathRotatedAroundBoundingBoxCenter(CGPathRef path, CGFloa
         [contactedAsteroid runAction:[SKAction removeFromParent]];
         [self.asteroids removeObject:contactedAsteroid];
         
-        CGRect boundingRect = contactedAsteroid.calculateAccumulatedFrame;
-        boundingRect.origin = CGPointZero;
+        [self.player removeAllChildren];
         
-        CGRect firstHalf = CGRectMake(0.0, 0.0, CGRectGetMidX(boundingRect), boundingRect.size.height);
-        CGRect secondHalf = CGRectMake(firstHalf.size.width, 0.0, boundingRect.size.width, boundingRect.size.height);
-        
-        SKAction* wait = [SKAction waitForDuration:0.2];
-        SKAction* addAsteroidPieces = [SKAction runBlock:^{
-            [self addCroppedAsteroidForRect:firstHalf withOriginalNode:contactedAsteroid];
-            [self addCroppedAsteroidForRect:secondHalf withOriginalNode:contactedAsteroid];
-        }];
-        
-        [self runAction:[SKAction sequence:@[ wait, addAsteroidPieces ]]];
+        for (int i = 0; i < 2; i++) {
+            SKSpriteNode* fragment = [self createAsteroid];
+            fragment.position = CGPointZero;
+            fragment.size = CGSizeMake(fragment.size.width / 2, fragment.size.height / 2);
+            [self addChild:fragment];
+            
+            [self addRandomMovementToNode:fragment];
+            [self.asteroids addObject:fragment];
+            
+            [fragment runAction:[SKAction moveTo:contact.contactPoint duration:0.0]];
+        }
     }
-}
-
--(void)addCroppedAsteroidForRect:(CGRect)rect withOriginalNode:(SKNode*)originalNode {
-    SKNode* asteroid = [self createAsteroid];
-    asteroid.position = CGPointZero;
-    
-    SKCropNode* crop = [self makeCropNodeForRect:rect];
-    crop.position = originalNode.position;
-    
-    crop.physicsBody = asteroid.physicsBody;
-    crop.physicsBody.categoryBitMask = 0;
-    asteroid.physicsBody = nil;
-    
-    [crop addChild:asteroid];
-    [self addChild:crop];
-    
-    [crop runAction:[SKAction waitForDuration:0.2] completion:^{
-        [self addRandomMovementToNode:crop];
-    }];
-    
-    [self.asteroids addObject:crop];
-}
-
--(SKCropNode*)makeCropNodeForRect:(CGRect)rect {
-    CGMutablePathRef path = CGPathCreateMutable();
-    CGPathAddRect(path, &CGAffineTransformIdentity, rect);
-    
-    SKShapeNode* half = [SKShapeNode node];
-    half.fillColor = [BBUColor whiteColor];
-    half.path = path;
-    
-    SKCropNode* maskHalf = [SKCropNode node];
-    maskHalf.maskNode = half;
-    
-    return maskHalf;
 }
 
 #pragma mark - Touch handling
