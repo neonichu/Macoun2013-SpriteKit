@@ -8,6 +8,12 @@
 
 #import "BBUMyScene.h"
 
+#if TARGET_OS_IPHONE
+typedef UIColor BBUColor;
+#else
+typedef NSColor BBUColor;
+#endif
+
 static NSString* kMovementAction = @"MovementAction";
 
 static const uint32_t worldCategory             =  0x1 << 0;
@@ -120,7 +126,7 @@ static CGPathRef createPathRotatedAroundBoundingBoxCenter(CGPathRef path, CGFloa
 }
 
 -(void)updateScoreBoard {
-    self.scoreBoard.text = [NSString stringWithFormat:@"Score: %d - Lives: %d", self.points, self.lives];
+    self.scoreBoard.text = [NSString stringWithFormat:@"Score: %ld - Lives: %ld", self.points, self.lives];
 }
 
 #pragma mark - Collision detection
@@ -267,7 +273,7 @@ static CGPathRef createPathRotatedAroundBoundingBoxCenter(CGPathRef path, CGFloa
     CGPathAddRect(path, &CGAffineTransformIdentity, rect);
     
     SKShapeNode* half = [SKShapeNode node];
-    half.fillColor = [UIColor whiteColor];
+    half.fillColor = [BBUColor whiteColor];
     half.path = path;
     
     SKCropNode* maskHalf = [SKCropNode node];
@@ -304,6 +310,8 @@ static CGPathRef createPathRotatedAroundBoundingBoxCenter(CGPathRef path, CGFloa
 
 }
 
+#if TARGET_OS_IPHONE
+
 -(void)touchesBegan:(NSSet *)touches withEvent:(UIEvent *)event {
     [self rotatePlayerAndMoveForwardWithTouchPoint:[[touches anyObject] locationInView:self.view]];
     
@@ -331,5 +339,7 @@ static CGPathRef createPathRotatedAroundBoundingBoxCenter(CGPathRef path, CGFloa
 -(void)touchesMoved:(NSSet *)touches withEvent:(UIEvent *)event {
     [self rotatePlayerAndMoveForwardWithTouchPoint:[[touches anyObject] locationInView:self.view]];
 }
+
+#endif
 
 @end

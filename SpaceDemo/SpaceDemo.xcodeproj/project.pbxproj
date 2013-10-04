@@ -7,6 +7,20 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		8659F9DB17FF137C0083D37A /* Cocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8659F9DA17FF137C0083D37A /* Cocoa.framework */; };
+		8659F9DC17FF137C0083D37A /* SpriteKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 86894B8917FD814200ADBECC /* SpriteKit.framework */; };
+		8659F9E817FF137C0083D37A /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 8659F9E717FF137C0083D37A /* main.m */; };
+		8659F9EC17FF137C0083D37A /* Credits.rtf in Resources */ = {isa = PBXBuildFile; fileRef = 8659F9EA17FF137C0083D37A /* Credits.rtf */; };
+		8659F9EE17FF137C0083D37A /* MainMenu.xib in Resources */ = {isa = PBXBuildFile; fileRef = 8659F9ED17FF137C0083D37A /* MainMenu.xib */; };
+		8659F9F317FF137C0083D37A /* BBUAppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 8659F9F217FF137C0083D37A /* BBUAppDelegate.m */; };
+		8659FA1117FF13D80083D37A /* BBUMyScene.m in Sources */ = {isa = PBXBuildFile; fileRef = 86894B9E17FD814200ADBECC /* BBUMyScene.m */; };
+		8659FA1217FF14840083D37A /* 102734__sarge4267__explosion4.wav in Resources */ = {isa = PBXBuildFile; fileRef = 86894BC917FDDE0700ADBECC /* 102734__sarge4267__explosion4.wav */; };
+		8659FA1317FF14880083D37A /* asteroid.png in Resources */ = {isa = PBXBuildFile; fileRef = 86894BCB17FE01D500ADBECC /* asteroid.png */; };
+		8659FA1417FF148F0083D37A /* Explosion.sks in Resources */ = {isa = PBXBuildFile; fileRef = 86894BC317FDA9E700ADBECC /* Explosion.sks */; };
+		8659FA1517FF14920083D37A /* Spaceship.png in Resources */ = {isa = PBXBuildFile; fileRef = 86894BA017FD814200ADBECC /* Spaceship.png */; };
+		8659FA1617FF14950083D37A /* spark.png in Resources */ = {isa = PBXBuildFile; fileRef = 86894BC417FDA9E700ADBECC /* spark.png */; };
+		8659FA1717FF14980083D37A /* Star.sks in Resources */ = {isa = PBXBuildFile; fileRef = 86894BC717FDDA8600ADBECC /* Star.sks */; };
+		8659FA1917FF26DA0083D37A /* GameController.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8659FA1817FF26DA0083D37A /* GameController.framework */; };
 		86894B8417FD814200ADBECC /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 86894B8317FD814200ADBECC /* Foundation.framework */; };
 		86894B8617FD814200ADBECC /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 86894B8517FD814200ADBECC /* CoreGraphics.framework */; };
 		86894B8817FD814200ADBECC /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 86894B8717FD814200ADBECC /* UIKit.framework */; };
@@ -26,6 +40,19 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		8659F9D917FF137C0083D37A /* SpaceDemoMac.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SpaceDemoMac.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		8659F9DA17FF137C0083D37A /* Cocoa.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Cocoa.framework; path = Library/Frameworks/Cocoa.framework; sourceTree = DEVELOPER_DIR; };
+		8659F9DE17FF137C0083D37A /* AppKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AppKit.framework; path = Library/Frameworks/AppKit.framework; sourceTree = SDKROOT; };
+		8659F9DF17FF137C0083D37A /* CoreData.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreData.framework; path = Library/Frameworks/CoreData.framework; sourceTree = SDKROOT; };
+		8659F9E017FF137C0083D37A /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
+		8659F9E317FF137C0083D37A /* SpaceDemoMac-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "SpaceDemoMac-Info.plist"; sourceTree = "<group>"; };
+		8659F9E717FF137C0083D37A /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		8659F9E917FF137C0083D37A /* SpaceDemoMac-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "SpaceDemoMac-Prefix.pch"; sourceTree = "<group>"; };
+		8659F9EB17FF137C0083D37A /* en */ = {isa = PBXFileReference; lastKnownFileType = text.rtf; name = en; path = en.lproj/Credits.rtf; sourceTree = "<group>"; };
+		8659F9ED17FF137C0083D37A /* MainMenu.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = MainMenu.xib; sourceTree = "<group>"; };
+		8659F9F217FF137C0083D37A /* BBUAppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = BBUAppDelegate.m; sourceTree = "<group>"; };
+		8659F9F417FF137C0083D37A /* BBUAppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = BBUAppDelegate.h; sourceTree = "<group>"; };
+		8659FA1817FF26DA0083D37A /* GameController.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = GameController.framework; path = Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.9.sdk/System/Library/Frameworks/GameController.framework; sourceTree = DEVELOPER_DIR; };
 		86894B8017FD814200ADBECC /* SpaceDemo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SpaceDemo.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		86894B8317FD814200ADBECC /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		86894B8517FD814200ADBECC /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
@@ -51,6 +78,16 @@
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
+		8659F9D617FF137C0083D37A /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				8659FA1917FF26DA0083D37A /* GameController.framework in Frameworks */,
+				8659F9DC17FF137C0083D37A /* SpriteKit.framework in Frameworks */,
+				8659F9DB17FF137C0083D37A /* Cocoa.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		86894B7D17FD814200ADBECC /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
@@ -65,11 +102,45 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		8659F9DD17FF137C0083D37A /* Other Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				8659F9DE17FF137C0083D37A /* AppKit.framework */,
+				8659F9DF17FF137C0083D37A /* CoreData.framework */,
+				8659F9E017FF137C0083D37A /* Foundation.framework */,
+			);
+			name = "Other Frameworks";
+			sourceTree = "<group>";
+		};
+		8659F9E117FF137C0083D37A /* Mac */ = {
+			isa = PBXGroup;
+			children = (
+				8659F9F417FF137C0083D37A /* BBUAppDelegate.h */,
+				8659F9F217FF137C0083D37A /* BBUAppDelegate.m */,
+				8659F9ED17FF137C0083D37A /* MainMenu.xib */,
+				8659F9E217FF137C0083D37A /* Supporting Files */,
+			);
+			name = Mac;
+			path = SpaceDemoMac;
+			sourceTree = "<group>";
+		};
+		8659F9E217FF137C0083D37A /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				8659F9EA17FF137C0083D37A /* Credits.rtf */,
+				8659F9E717FF137C0083D37A /* main.m */,
+				8659F9E317FF137C0083D37A /* SpaceDemoMac-Info.plist */,
+				8659F9E917FF137C0083D37A /* SpaceDemoMac-Prefix.pch */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
 		86894B7717FD814200ADBECC = {
 			isa = PBXGroup;
 			children = (
 				86894B8B17FD814200ADBECC /* Code */,
 				86894B8217FD814200ADBECC /* Frameworks */,
+				8659F9E117FF137C0083D37A /* Mac */,
 				86894B8117FD814200ADBECC /* Products */,
 				86894BBF17FD817700ADBECC /* Resources */,
 				86894B8C17FD814200ADBECC /* Supporting Files */,
@@ -80,6 +151,7 @@
 			isa = PBXGroup;
 			children = (
 				86894B8017FD814200ADBECC /* SpaceDemo.app */,
+				8659F9D917FF137C0083D37A /* SpaceDemoMac.app */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -87,10 +159,13 @@
 		86894B8217FD814200ADBECC /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				8659F9DA17FF137C0083D37A /* Cocoa.framework */,
 				86894B8517FD814200ADBECC /* CoreGraphics.framework */,
 				86894B8317FD814200ADBECC /* Foundation.framework */,
+				8659FA1817FF26DA0083D37A /* GameController.framework */,
 				86894B8917FD814200ADBECC /* SpriteKit.framework */,
 				86894B8717FD814200ADBECC /* UIKit.framework */,
+				8659F9DD17FF137C0083D37A /* Other Frameworks */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -138,6 +213,23 @@
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
+		8659F9D817FF137C0083D37A /* SpaceDemoMac */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 8659FA0F17FF137C0083D37A /* Build configuration list for PBXNativeTarget "SpaceDemoMac" */;
+			buildPhases = (
+				8659F9D517FF137C0083D37A /* Sources */,
+				8659F9D617FF137C0083D37A /* Frameworks */,
+				8659F9D717FF137C0083D37A /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = SpaceDemoMac;
+			productName = SpaceDemoMac;
+			productReference = 8659F9D917FF137C0083D37A /* SpaceDemoMac.app */;
+			productType = "com.apple.product-type.application";
+		};
 		86894B7F17FD814200ADBECC /* SpaceDemo */ = {
 			isa = PBXNativeTarget;
 			buildConfigurationList = 86894BB917FD814200ADBECC /* Build configuration list for PBXNativeTarget "SpaceDemo" */;
@@ -179,11 +271,27 @@
 			projectRoot = "";
 			targets = (
 				86894B7F17FD814200ADBECC /* SpaceDemo */,
+				8659F9D817FF137C0083D37A /* SpaceDemoMac */,
 			);
 		};
 /* End PBXProject section */
 
 /* Begin PBXResourcesBuildPhase section */
+		8659F9D717FF137C0083D37A /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				8659F9EC17FF137C0083D37A /* Credits.rtf in Resources */,
+				8659FA1717FF14980083D37A /* Star.sks in Resources */,
+				8659FA1217FF14840083D37A /* 102734__sarge4267__explosion4.wav in Resources */,
+				8659FA1417FF148F0083D37A /* Explosion.sks in Resources */,
+				8659FA1617FF14950083D37A /* spark.png in Resources */,
+				8659FA1317FF14880083D37A /* asteroid.png in Resources */,
+				8659FA1517FF14920083D37A /* Spaceship.png in Resources */,
+				8659F9EE17FF137C0083D37A /* MainMenu.xib in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		86894B7E17FD814200ADBECC /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -202,6 +310,16 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
+		8659F9D517FF137C0083D37A /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				8659FA1117FF13D80083D37A /* BBUMyScene.m in Sources */,
+				8659F9E817FF137C0083D37A /* main.m in Sources */,
+				8659F9F317FF137C0083D37A /* BBUAppDelegate.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		86894B7C17FD814200ADBECC /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -216,6 +334,14 @@
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXVariantGroup section */
+		8659F9EA17FF137C0083D37A /* Credits.rtf */ = {
+			isa = PBXVariantGroup;
+			children = (
+				8659F9EB17FF137C0083D37A /* en */,
+			);
+			name = Credits.rtf;
+			sourceTree = "<group>";
+		};
 		86894B9717FD814200ADBECC /* Main.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
@@ -228,6 +354,53 @@
 /* End PBXVariantGroup section */
 
 /* Begin XCBuildConfiguration section */
+		8659FA0B17FF137C0083D37A /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				COMBINE_HIDPI_IMAGES = YES;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(DEVELOPER_FRAMEWORKS_DIR)",
+				);
+				GCC_ENABLE_OBJC_EXCEPTIONS = YES;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "SpaceDemoMac/SpaceDemoMac-Prefix.pch";
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				INFOPLIST_FILE = "SpaceDemoMac/SpaceDemoMac-Info.plist";
+				MACOSX_DEPLOYMENT_TARGET = 10.9;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = macosx;
+				SPRITEKIT_TEXTURE_ATLAS_OUTPUT = YES;
+				WRAPPER_EXTENSION = app;
+			};
+			name = Debug;
+		};
+		8659FA0C17FF137C0083D37A /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				COMBINE_HIDPI_IMAGES = YES;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(DEVELOPER_FRAMEWORKS_DIR)",
+				);
+				GCC_ENABLE_OBJC_EXCEPTIONS = YES;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "SpaceDemoMac/SpaceDemoMac-Prefix.pch";
+				INFOPLIST_FILE = "SpaceDemoMac/SpaceDemoMac-Info.plist";
+				MACOSX_DEPLOYMENT_TARGET = 10.9;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = macosx;
+				SPRITEKIT_TEXTURE_ATLAS_OUTPUT = YES;
+				WRAPPER_EXTENSION = app;
+			};
+			name = Release;
+		};
 		86894BB717FD814200ADBECC /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
@@ -331,6 +504,14 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
+		8659FA0F17FF137C0083D37A /* Build configuration list for PBXNativeTarget "SpaceDemoMac" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				8659FA0B17FF137C0083D37A /* Debug */,
+				8659FA0C17FF137C0083D37A /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
 		86894B7B17FD814200ADBECC /* Build configuration list for PBXProject "SpaceDemo" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
@@ -347,6 +528,7 @@
 				86894BBB17FD814200ADBECC /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
