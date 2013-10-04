@@ -286,12 +286,10 @@ static CGPathRef createPathRotatedAroundBoundingBoxCenter(CGPathRef path, CGFloa
 #pragma mark - Touch handling
 
 -(void)rotatePlayerWithEndPoint:(CGPoint)endPoint {
-    CGFloat deltaX = endPoint.x - self.player.position.x;
-    CGFloat deltaY = endPoint.y - self.player.position.y;
+    CGFloat deltaX = endPoint.x - CGRectGetMidX(self.player.frame);
+    CGFloat deltaY = endPoint.y - CGRectGetMidY(self.player.frame);
     
-    CGFloat angleInDegrees = -atan2f(deltaY, deltaX) * 180.0 / M_PI;
-    
-    self.player.zRotation = DegreesToRadians(angleInDegrees);
+    self.player.zRotation = atan2f(deltaY, deltaX);
 }
 
 -(void)rotatePlayerAndMoveForwardWithTouchPoint:(CGPoint)point {
