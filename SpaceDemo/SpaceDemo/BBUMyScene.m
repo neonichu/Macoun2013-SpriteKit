@@ -121,10 +121,6 @@ static CGPathRef createPathRotatedAroundBoundingBoxCenter(CGPathRef path, CGFloa
     [node runAction:[SKAction repeatActionForever:move] withKey:kMovementAction];
 }
 
--(void)update:(CFTimeInterval)currentTime {
-    /* Called before each frame is rendered */
-}
-
 -(void)updateScoreBoard {
     self.scoreBoard.text = [NSString stringWithFormat:@"Score: %ld - Lives: %ld",
                             (unsigned long)self.points, (unsigned long)self.lives];
