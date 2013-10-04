@@ -126,7 +126,8 @@ static CGPathRef createPathRotatedAroundBoundingBoxCenter(CGPathRef path, CGFloa
 }
 
 -(void)updateScoreBoard {
-    self.scoreBoard.text = [NSString stringWithFormat:@"Score: %ld - Lives: %ld", self.points, self.lives];
+    self.scoreBoard.text = [NSString stringWithFormat:@"Score: %ld - Lives: %ld",
+                            (unsigned long)self.points, (unsigned long)self.lives];
 }
 
 #pragma mark - Collision detection
