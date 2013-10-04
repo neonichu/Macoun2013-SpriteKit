@@ -83,7 +83,7 @@ static CGPathRef createPathRotatedAroundBoundingBoxCenter(CGPathRef path, CGFloa
         [self addChild:self.player];
         
         self.asteroids = [@[] mutableCopy];
-        for (int i = 0; i < arc4random_uniform(20); i++) {
+        for (int i = 0; i < 5; i++) {
             SKNode* asteroid = [self createAsteroid];
             [self addChild:asteroid];
         
