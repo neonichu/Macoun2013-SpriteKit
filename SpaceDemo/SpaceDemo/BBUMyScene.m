@@ -61,7 +61,7 @@ static CGPathRef createPathRotatedAroundBoundingBoxCenter(CGPathRef path, CGFloa
         
         self.scoreBoard = [SKLabelNode labelNodeWithFontNamed:@"Chalkduster"];
         self.scoreBoard.fontSize = 20.0;
-        self.scoreBoard.position = CGPointMake(120.0, 440.0);
+        self.scoreBoard.position = CGPointMake(CGRectGetMidX(self.frame), self.size.height - 40.0);
         [self updateScoreBoard];
         [self addChild:self.scoreBoard];
         
