@@ -50,3 +50,7 @@ Example code for my presentation on Sprite Kit for [Macoun][1] 2013.
 [1]: http://macoun.de/
 [2]: http://www.freesound.org/people/sarge4267/sounds/102734/
 [3]: http://commons.wikimedia.org/wiki/File:Asteroid_1998_KY26_croped.jpg
+
+
+[![Bitdeli Badge](https://d2weczhvl823v0.cloudfront.net/neonichu/macoun2013-spritekit/trend.png)](https://bitdeli.com/free "Bitdeli Badge")
+
